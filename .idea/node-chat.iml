@@ -9,5 +9,6 @@
     <orderEntry type="library" name="jquery-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="node-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="nodeJs" level="application" />
+    <orderEntry type="library" name="chat node_modules" level="project" />
   </component>
 </module>
