@@ -10,7 +10,7 @@ html, body {
     height: 640px;
     padding: 5px;
     margin: 0 auto;
-    background-color: #ddd;
+    background-color: #c79efe;
 }
 
 #loginWrapper {
@@ -100,6 +100,8 @@ html, body {
     height: 96px;
     float: right;
     /*margin-right: 5px;*/
+    -webkit-appearance: none;
+    background-color: #ebebeb;
 }
 
 #emojiWrapper {
