@@ -19,7 +19,7 @@ var express = require('express'),
     users = [];
 app.use('/', express.static(__dirname + '/www'));
 
-server.listen(8088);
+server.listen(3002);
 
 io.on("connection", function (socket) {
     socket.on("login", function (name) {
@@ -43,14 +43,18 @@ io.on("connection", function (socket) {
             }
 
         }),
-        socket.on("postMsg", function (msg) {
+        socket.on("postMsg", function (msg, color) {
             if (this.name !== undefined) {
-                socket.broadcast.emit("newMsg", socket.name, msg)
+                socket.broadcast.emit("newMsg", socket.name, msg, color);
             }
 
+        }),
+
+        socket.on("img", function (img) {
+            socket.broadcast.emit("newImg", socket.name, img);
         })
     )
 })
 
-console.log("server is 8088");
+console.log("server is 3002");
 
