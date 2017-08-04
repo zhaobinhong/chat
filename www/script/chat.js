@@ -51,6 +51,7 @@ Chart.prototype = {
 
         //发送图片
         document.getElementById("sendImage").addEventListener("change", function () {
+            console.log(222)
             let color = document.getElementById("colorStyle").value;
 
             if (this.files.length != 0) {
@@ -65,7 +66,7 @@ Chart.prototype = {
                 reader.onload = function (e) {
                     this.value = '';
                     that.socket.emit('img', e.target.result);
-                    that._displayNewImg('me', e.target.result, color);
+                    that._displayNewImg('我', e.target.result, color);
 
 
                 };
@@ -96,7 +97,6 @@ Chart.prototype = {
                 messageInput.focus();
                 messageInput.value = messageInput.value + '[emoji:' + target.title + ']';
             }
-            ;
         }, false);
 
         //回车键

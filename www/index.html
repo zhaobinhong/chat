@@ -6,40 +6,59 @@
     <meta name="author" content="Hovace">
     <meta name="description" content="Chat | a simple chat application built with node.js and websocket">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>J 聊</title>
+    <title>Zi U 聊</title>
+    <link rel="stylesheet" href="style/bootstrap.css">
     <link rel="stylesheet" href="style/main.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!--[if lt IE 9]>
+
+    <script>
+
+        document.createElement('video');
+
+    </script>
+
+    <![endif]-->
 </head>
 <body>
+
 <div class="wrapper">
+    <video autoplay loop poster="video/polina.jpg" id="bgvid">
+
+        <source src="video/polina.webm" type="video/webm">
+
+        <source src="video/polina.mp4" type="video/mp4">
+
+    </video>
+
     <div class="banner">
-        <h2>J 聊</h2>
+        <h2>Zi U 聊</h2>
         <span id="status"></span>
     </div>
     <div id="historyMsg">
     </div>
     <div class="controls">
         <div class="items">
-            <input id="colorStyle" type="color" placeHolder='#000' title="font color"/>
-            <input id="emoji" type="button" value="表情" title="emoji"/>
+            <input id="colorStyle" type="color" placeHolder='#000' class=".btn" title="font color"/>
+            <input id="emoji"  type="button" value="表情" title="emoji"/>
             <label for="sendImage" class="imageLable">
                 <input type="button" value="图片"/>
                 <input id="sendImage" type="file" value="图片"/>
             </label>
-            <input id="clearBtn" type="button" value="清屏" title="clear screen"/>
+            <input id="clearBtn"  type="button" value="清屏" title="clear screen"/>
         </div>
-        <textarea id="messageInput" placeHolder="enter to send"></textarea>
-        <input id="sendBtn" type="button" value="发送">
+        <textarea id="messageInput" class="form-control" rows="3" placeHolder="enter to send"></textarea>
+        <input id="sendBtn" class="btn btn-default" type="button" value="发送">
         <div id="emojiWrapper">
         </div>
     </div>
 </div>
 <div id="loginWrapper">
     <p id="info">正在连接服务...</p>
-    <div id="nickWrapper">
-        <input type="text" placeHolder="nickname" id="nicknameInput"/>
-        <input type="button" value="OK" id="loginBtn"/>
+    <div id="nickWrapper" class="col-xs-6 col-md-2 col-md-offset-5 col-xs-offset-3">
+        <input type="text" class="form-control" placeHolder="nickname" id="nicknameInput"/>
+        <input type="button" class="btn btn-default btn-info" value="OK" id="loginBtn"/>
     </div>
 </div>
 <script src="/socket.io/socket.io.js"></script>

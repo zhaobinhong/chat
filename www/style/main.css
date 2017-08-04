@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #efefef;
+    /*background-color: #efefef;*/
     font-family: sans-serif;
 }
 
@@ -10,7 +10,7 @@ html, body {
     height: 640px;
     padding: 5px;
     margin: 0 auto;
-    background-color: #c79efe;
+    /*background-color: #c79efe;*/
 }
 
 #loginWrapper {
@@ -24,6 +24,11 @@ html, body {
     color: #fff;
     display: block;
     padding-top: 200px;
+}
+
+#loginBtn {
+    border-radius: 5px;
+    margin-top: 4px;
 }
 
 #nickWrapper {
@@ -51,6 +56,10 @@ html, body {
     background-color: #fff;
     overflow: auto;
     padding: 2px;
+    filter: alpha(Opacity=80);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+
 }
 
 #historyMsg img {
@@ -81,6 +90,7 @@ html, body {
     position: absolute;
     width: 52px;
     left: 0;
+    top: 0;
     opacity: 0;
     overflow: hidden;
 }
@@ -88,10 +98,14 @@ html, body {
 /*end custom file input*/
 
 #messageInput {
+    display: -webkit-inline-box;
     width: 78%;
     max-width: 440px;
     height: 90px;
     max-height: 90px;
+    filter: alpha(Opacity=80);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
 }
 
 #sendBtn {
@@ -102,6 +116,9 @@ html, body {
     /*margin-right: 5px;*/
     -webkit-appearance: none;
     background-color: #ebebeb;
+    filter: alpha(Opacity=80);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
 }
 
 #emojiWrapper {
@@ -133,3 +150,27 @@ html, body {
 footer {
     text-align: center;
 }
+
+video {
+    display: block;
+}
+
+video#bgvid {
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    width: auto;
+    height: auto;
+    z-index: -100;
+
+    background: url(../video/polina.jpg) no-repeat;
+
+    background-size: cover;
+
+}
+
