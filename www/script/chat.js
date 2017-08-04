@@ -111,7 +111,7 @@ Chart.prototype = {
 
         }, false);
         document.getElementById('messageInput').addEventListener('keyup', function (e) {
-            var messageInput = document.getElementById('messageInput'),
+            let messageInput = document.getElementById('messageInput'),
                 msg = messageInput.value,
                 color = document.getElementById('colorStyle').value;
             if (e.keyCode == 13 && msg.trim().length != 0) {
@@ -120,6 +120,12 @@ Chart.prototype = {
                 that._displayNewMsg('我', msg, color);
             }
 
+        }, false);
+
+        //清屏
+        document.getElementById("clearBtn").addEventListener('click', function () {
+            let historyMsg = document.getElementById("historyMsg");
+            historyMsg.innerHTML = '';
         }, false);
 
 
