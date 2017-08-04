@@ -55,7 +55,7 @@ html, body {
     height: 400px;
     background-color: #fff;
     overflow: auto;
-    padding: 2px;
+    padding: 10px;
     filter: alpha(Opacity=80);
     -moz-opacity: 0.5;
     opacity: 0.5;
