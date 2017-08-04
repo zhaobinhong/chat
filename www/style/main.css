@@ -99,6 +99,7 @@ html, body {
 
 #messageInput {
     display: -webkit-inline-box;
+    display: inline-block;
     width: 78%;
     max-width: 440px;
     height: 90px;
