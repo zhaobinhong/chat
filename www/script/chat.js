@@ -117,7 +117,7 @@ Chart.prototype = {
             if (e.keyCode == 13 && msg.trim().length != 0) {
                 messageInput.value = '';
                 that.socket.emit('postMsg', msg, color);
-                that._displayNewMsg('me', msg, color);
+                that._displayNewMsg('我', msg, color);
             }
 
         }, false);
